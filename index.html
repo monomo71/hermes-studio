@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Browser Test - Animatie</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            border-bottom: 4px solid #3498db;
+        }
+
+        .bal {
+            width: 50px;
+            height: 50px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 125px;
+            animation: stuiteren 1.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes stuiteren {
+            0% {
+                bottom: 0;
+                transform: scale(1);
+            }
+            40% {
+                transform: scale(1, 0.9); /* Indrukken bij de grond */
+            }
+            100% {
+                bottom: 300px;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="bal"></div>
+    </div>
+
+</body>
+</html>
